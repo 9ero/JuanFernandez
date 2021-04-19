@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "NotoBold";
+  src: url("../fonts/notosans-bold-webfont.eot");
+  src: url("../fonts/notosans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-bold-webfont.woff2") format("woff2"), url("../fonts/notosans-bold-webfont.woff") format("woff"), url("../fonts/notosans-bold-webfont.ttf") format("truetype"), url("../fonts/notosans-bold-webfont.svg#noto_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoItalic";
+  src: url("../fonts/notosans-italic-webfont.eot");
+  src: url("../fonts/notosans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-italic-webfont.woff2") format("woff2"), url("../fonts/notosans-italic-webfont.woff") format("woff"), url("../fonts/notosans-italic-webfont.ttf") format("truetype"), url("../fonts/notosans-italic-webfont.svg#noto_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoRegular";
+  src: url("../fonts/notosans-regular-webfont.eot");
+  src: url("../fonts/notosans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/notosans-regular-webfont.woff2") format("woff2"), url("../fonts/notosans-regular-webfont.woff") format("woff"), url("../fonts/notosans-regular-webfont.ttf") format("truetype"), url("../fonts/notosans-regular-webfont.svg#noto_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoLight";
+  src: url("../fonts/notosans-light-webfont.woff2") format("woff2"), url("../fonts/notosans-light-webfont.woff") format("woff"), url("../fonts/notosans-light-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.cont {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.top-container {
+  background-image: url("../imgs/header.jpg");
+}
+
+.menu {
+  padding: 2% 18vw;
+  background-color: rgba(53, 63, 70, 0.7);
+}
+@media only screen and (max-width: 480px) {
+  .menu {
+    padding: 2% 4vw;
+  }
+}
+
+.logo {
+  color: #fff;
+  font-size: 30px;
+  font-family: "NotoBold";
+}
+
+.letra-logo {
+  color: #4bcaff;
+}
+
+.central-container {
+  padding: 10% 18vw;
+}
+@media only screen and (max-width: 480px) {
+  .central-container {
+    padding: 2vw;
+  }
+}
+
+.central-text {
+  color: #fff;
+  background-color: rgba(53, 63, 70, 0.7);
+  text-transform: uppercase;
+  font-size: 42px;
+  font-family: "NotoLight";
+}
+
+.bot-container {
+  background-color: #4bcaff;
+  padding: 3% 18vw;
+}
+
+.bot-title {
+  font-size: 30px;
+  font-family: "NotoLight";
+  color: #fff;
+}
+
+.icono {
+  margin: 2% 0;
+}
+
+.bot-subtitle {
+  font-size: 24px;
+  font-family: "NotoRegular";
+  color: #fff;
+}
+
+.bot-text {
+  font-size: 12px;
+  font-family: "NotoRegular";
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+ul li a {
+  padding: 10px;
+  border: 1px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "notoBold";
+}
+ul li a:hover {
+  color: #4bcaff;
+  border-style: solid;
+  border-color: #4bcaff;
+}
