@@ -2,24 +2,26 @@
 @import 'vars';
 @import 'media-queries';
 
-@mixin prop($font, $fontSize, ) {
+
+//mixins
+@mixin prop($font, $fontSize, $color:$white-copy ) {
     font-size: $fontSize;
     font-family: $font;
+    color: $color;
     
 }
+//fin mixins
 
-
-.cont{
+body{
     padding: 0;
     margin: 0;
     border: 0;
 }
 
-.top-container{
-    background-image: url("../imgs/header.jpg");
-   
-}
+
 .menu{
+    
+ 
     padding: 2% 18vw;
     background-color: $nav-bg; 
     @include respond-to($phone){
@@ -30,7 +32,7 @@
     
 
 .logo{
-    color: $white-copy;
+    
     @include prop('NotoBold', 30px);
     
 }
@@ -40,7 +42,7 @@
 
 
 .central-container{
-    
+    background-image: url('../imgs/header.jpg');
     padding: 10% 18vw;
     @include respond-to($phone){
         padding: 2vw;
@@ -48,7 +50,7 @@
     
 }
 .central-text{
-    color:$white-copy;
+    
     background-color: $nav-bg;
     text-transform: uppercase;
     @include prop('NotoLight', 42px);
@@ -61,49 +63,249 @@
 }
 .bot-title{
     @include prop('NotoLight', 30px);
-    color: $white-copy;
+    
 }
 .icono{
     margin: 2% 0;
 }
 .bot-subtitle{
     @include prop('NotoRegular', 24px);
-    color: $white-copy;
+    
 }
 .bot-text{
     @include prop('NotoRegular', 12px);
-    color: $white-copy;
+    
 }
 
 
 
 
-ul{
-    list-style: none;
-    
 
-    li{
+//portfolio
+.lmenu{
+    ul{
+        list-style: none;
         
 
-        a{
-            padding: 10px;
-            border: 1px;
-          
-            color: $white-copy;
-            text-decoration: none;
-            @include prop('notoBold', 14px);
+        li{
             
-           
-        }
-        a:hover{
-            
-            color: $light-blue;
-            border-style: solid;
-            border-color: $light-blue;
 
+            a{
+                padding: 10px;
+                border: 1px;
+            
+                
+                text-decoration: none;
+                @include prop('notoBold', 14px);
+                
+                &:hover{
+                
+                    color: $light-blue;
+                    border-style: solid;
+                    border-color: $light-blue;
+        
+                }
+            }
+        
         }
     }
 }
+
+.p_header{
+    
+    padding: 3% 18vw;
+    ul{
+        list-style: none;
+        
+
+        li{
+            
+
+            a{
+                padding: 10px;
+                border: 1px;
+            
+                
+                text-decoration: none;
+                @include prop('notoBold', 14px, $visit-me-color);
+                
+                &:hover{
+                
+                    color: $light-blue;
+                    border-style: solid;
+                    border-color: $light-blue;
+        
+                }
+            }
+        
+        }
+    }
+
+}
+.p_log{
+    text-transform: uppercase;
+    @include prop('notoRegular', 30px, $visit-me-color);
+    
+        display: block;
+        width: 1.7em;
+        margin-left: .10em;
+        border-bottom: 3px solid $dark-bg;
+}
+.work-items{
+    padding: 0;
+    text-align: center;
+}
+
+.work{
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    margin: .5em;
+    cursor: pointer;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    @include respond-to($phone) {
+        margin: 0.5em 0;
+    }
+}
+
+.inner{
+    width:100%;
+    height: 100%;
+    background: $dark-bg;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 10px;
+    padding: 0;
+    transition: opacity 1.5s;
+
+    p{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        @include prop('notoRegular', 30px)
+       
+        
+       
+    }
+
+    &:hover{
+        opacity: .9;
+        transition: opacity .5s;
+        
+    }
+}
+
+//just default section
+.j_header{
+    background-color: $dark-bg;
+    h1{
+        @include prop('notoRegular', 30px, $white-copy)
+    }
+    p{
+   
+        line-height: 2em;
+        @include prop('notoRegular', .75em, $white-copy)
+    }
+    button{
+        font-family: 'notoLight';
+        display: inline-block;
+        margin: 1em 0 0;
+        color: $visit-me-color;
+        border: 1px solid $visit-me-color;
+        padding: .5em 2em;
+        font-size: .75em;
+        transition: all ease .5s;
+    
+        &:hover{
+            color: $light-blue;
+            border: 1px solid $light-blue;
+            text-decoration: none;
+        }
+    
+        @include respond-to($phone){
+            width: 100%;
+            font-size: 1em;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+    
+}
+.j_header{
+    padding: 2% 18vw; 
+    padding-bottom: 0em;  
+}
+.video-container {
+
+    @include respond-to($phone){
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        margin-top: 2em;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+  }
+  .j_mid{
+    padding: 2% 18vw; 
+    
+      background-color: $light-blue;
+      @include prop('notoLight', 30px );
+      h2{
+        display: block;
+        width: 2em;
+        margin-left: .75em;
+        border-bottom: 3px solid $white-copy;
+      }
+  }
+  .j_footer_container{
+      background-image: url('../imgs/camera.jpg');
+      padding: 3% 18vw;
+      p{
+          padding-top: 2em;
+          @include prop('notoRegular', 12px, );
+      } 
+      h1{
+          @include prop('notoBold', 30px, );
+            
+            margin: 0;
+        
+      }
+  }
+  .j_title_container{
+      
+    &:after {
+        content: '';
+        display: block;
+        width: 1.7em;
+        padding-top: .25em;
+        border-bottom: 3px solid $white-copy;
+    }
+  }
+  .j_icon_container{
+      padding-top: 2em;
+  }
+  .j_icon{
+      border: solid 2px $white-copy;
+      padding: 0.5em 0.5em ;
+  }
+  .j_footer_r{
+      padding-top: 2.75em;
+  }
+
+
 
 
 

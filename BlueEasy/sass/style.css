@@ -287,44 +287,4 @@ body {
   margin-left: .75em;
   border-bottom: 3px solid #fff;
 }
-
-.j_footer_container {
-  background-image: url("../imgs/camera.jpg");
-  padding: 3% 18vw;
-}
-
-.j_footer_container p {
-  padding-top: 2em;
-  font-size: 12px;
-  font-family: "notoRegular";
-  color: #fff;
-}
-
-.j_footer_container h1 {
-  font-size: 30px;
-  font-family: "notoBold";
-  color: #fff;
-  margin: 0;
-}
-
-.j_title_container:after {
-  content: '';
-  display: block;
-  width: 1.7em;
-  padding-top: .25em;
-  border-bottom: 3px solid #fff;
-}
-
-.j_icon_container {
-  padding-top: 2em;
-}
-
-.j_icon {
-  border: solid 2px #fff;
-  padding: 0.5em 0.5em;
-}
-
-.j_footer_r {
-  padding-top: 2.75em;
-}
 /*# sourceMappingURL=style.css.map */
